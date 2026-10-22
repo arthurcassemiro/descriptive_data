@@ -1,0 +1,153 @@
+<title>Contract 18139/2012 Read by the Method</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=Source+Code+Pro:wght@400;500&display=swap">
+<style>
+/* layout: the documents on the left as they come from the registers, the method on the right, arrows from field to rule */
+:root{--bg:#f7f8f6;--paper:#ffffff;--ink:#1b2430;--ink2:#4a5564;--mut:#7c8794;--line:#d8dde3;--soft:#eef1f4;--accent:#2c4f8f;--ch1a:#2b7de0;--ch3:#13a0a0;--rp:#c9ced6;--stop:#c4475f;--display:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3","Helvetica Neue",Arial,sans-serif;--mono:"Source Code Pro",Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14181d;--paper:#1c2128;--ink:#e8ecf0;--ink2:#b8c0ca;--mut:#8a94a0;--line:#343c46;--soft:#232a33;--accent:#8fb0ea;--ch1a:#5a9af0;--ch3:#3cc0c0;--rp:#4d5560;--stop:#e0718a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14181d;--paper:#1c2128;--ink:#e8ecf0;--ink2:#b8c0ca;--mut:#8a94a0;--line:#343c46;--soft:#232a33;--accent:#8fb0ea;--ch1a:#5a9af0;--ch3:#3cc0c0;--rp:#4d5560;--stop:#e0718a;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans);margin:0;padding-block:28px 60px;padding-inline:16px}
+.wrap{max-width:1360px;margin:0 auto;position:relative}
+h1{font:600 30px/1.2 var(--display);margin:0 0 6px;text-wrap:balance}
+.kick{font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.intro{color:var(--ink2);max-width:78ch;margin:0 0 26px}
+.cols{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;position:relative}
+@media (max-width:980px){.cols{grid-template-columns:1fr;gap:28px}}
+.doc{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin:0 0 22px;min-width:0}
+.doc h2{font:600 17px/1.3 var(--display);margin:0 0 2px}
+.doc .src{font-size:12.5px;color:var(--mut);margin:0 0 14px}
+.fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px 18px}
+.f{min-width:0}.f .l{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}.f .v{font-variant-numeric:tabular-nums}
+.f.wide{grid-column:1/-1}.f .v.obj{font:14px/1.45 var(--sans);color:var(--ink2)}
+.tw{overflow-x:auto;margin-top:6px}table{border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums;min-width:100%}
+th{font-weight:600;text-align:left;color:var(--ink2);border-bottom:1px solid var(--line);padding:5px 7px;white-space:nowrap}
+td{padding:4px 7px;border-bottom:1px solid var(--soft);white-space:nowrap}td.n,th.n{text-align:right}
+tr.rp td{color:var(--ink2);background:var(--soft)}
+.chip{display:inline-block;padding:1px 7px;border-radius:3px;font-size:11.5px;color:#fff;font-weight:600}
+.c1a{background:var(--ch1a)}.c3{background:var(--ch3)}
+.mono{font-family:var(--mono);font-size:12px}
+.b{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font:600 12px/1 var(--sans);vertical-align:2px;margin-left:5px;cursor:default}
+.b.on{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 35%,transparent)}
+.steps{display:flex;flex-direction:column;gap:12px;min-width:0}
+.step{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:12px 14px 12px 16px}
+.step.on{background:var(--soft)}
+.step h3{font:600 15px/1.3 var(--display);margin:0 0 4px;display:flex;gap:8px;align-items:center}
+.step h3 .n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font:600 12px/1 var(--sans);flex:none}
+.step p{margin:0;font-size:13.5px;color:var(--ink2)}
+.step .out{margin-top:6px;font-size:12.5px;color:var(--ink)}.step .out b{font-weight:600}
+.tl{width:100%;height:auto;display:block;margin-top:8px}.tlt{font:11px var(--sans);fill:var(--ink2)}.tlg{stroke:var(--line)}.tlm{stroke:var(--ink2)}
+svg.arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+svg.arrows path{fill:none;stroke:var(--accent);stroke-width:1.4;opacity:.55}svg.arrows path.on{opacity:1;stroke-width:2.2}
+@media (max-width:980px){svg.arrows{display:none}}
+.miss{background:var(--paper);border:1px dashed var(--line);border-radius:4px;padding:12px 16px;margin-top:8px}
+.miss h2{font:600 15px/1.3 var(--display);margin:0 0 4px}.miss p{margin:0;color:var(--ink2);font-size:13.5px}
+.foot{margin-top:26px;font-size:12.5px;color:var(--mut)}
+@media (prefers-reduced-motion:no-preference){svg.arrows path{transition:opacity .2s,stroke-width .2s}}
+</style>
+<div class="wrap">
+<p class="kick">Prototype, one contract through the method</p>
+<h1>Contract 18139/2012 Read by the Method</h1>
+<p class="intro">On the left, the two documents exactly as the registers give them: the contract record of the São Paulo road department (DER, open data) and the 22 commitment-note lines of the state's books that pay it. On the right, the nine readings the method makes of those fields. Each numbered mark on a field points to the rule that reads it. Hover a rule to see its fields.</p>
+<div class="cols" id="cols">
+<svg class="arrows" id="arrows" aria-hidden="true"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs></svg>
+<div class="left">
+<section class="doc">
+<h2>Contract record, DER register</h2>
+<p class="src">Contratos.xlsx, Dados Abertos SP, line 6542. Values in R$ at the price base of the contract (Dec 2011).</p>
+<div class="fields">
+<div class="f"><div class="l">Contract</div><div class="v">18139/2012</div></div>
+<div class="f"><div class="l">Tender notice</div><div class="v">038/12-CO DER, lot 002<span class="b" data-step="2">2</span></div></div>
+<div class="f"><div class="l">Type of service</div><div class="v">OBR (works)</div></div>
+<div class="f"><div class="l">Contractor</div><div class="v">Construtora Estrutural Ltda</div></div>
+<div class="f wide"><div class="l">Object<span class="b" data-step="1">1</span></div><div class="v obj">execução das obras e serviços de duplicação e restauração da pista da SP-095, do km 43,70 ao km 74,40, trecho Amparo, Pedreira, Jaguariúna, consistente em 02 (dois) lotes: (do km 57,50 ao km 74,40, Pedreira e Jaguariúna), lote 02.</div></div>
+<div class="f"><div class="l">Signed</div><div class="v">2012-08-09</div></div>
+<div class="f"><div class="l">Services ordered to start</div><div class="v">2012-08-16</div></div>
+<div class="f"><div class="l">Initial term</div><div class="v">18 months<span class="b" data-step="6">6</span></div></div>
+<div class="f"><div class="l">Current term</div><div class="v">83 months<span class="b" data-step="6">6</span></div></div>
+<div class="f"><div class="l">Current end</div><div class="v">2019-07-16</div></div>
+<div class="f"><div class="l">Works stopped</div><div class="v">2016-02-26<span class="b" data-step="7">7</span></div></div>
+<div class="f"><div class="l">Works resumed</div><div class="v">2017-07-25<span class="b" data-step="7">7</span></div></div>
+<div class="f"><div class="l">Final measurement (TAM)</div><div class="v">2019-05-21</div></div>
+<div class="f"><div class="l">Initial value</div><div class="v">58,388,931.36<span class="b" data-step="8">8</span></div></div>
+<div class="f"><div class="l">Value with amendments</div><div class="v">58,388,931.36<span class="b" data-step="8">8</span></div></div>
+<div class="f"><div class="l">Measured, accumulated</div><div class="v">58,388,925.28</div></div>
+<div class="f"><div class="l">Price adjustment, accumulated</div><div class="v">3,399,489.31</div></div>
+<div class="f"><div class="l">Total accumulated</div><div class="v">61,788,414.59<span class="b" data-step="5">5</span></div></div>
+<div class="f"><div class="l">Financial execution</div><div class="v">99.99%<span class="b" data-step="9">9</span></div></div>
+</div>
+<svg class="tl" viewBox="0 0 900 120" role="img" aria-label="timeline"><line x1="130" y1="40" x2="130" y2="80" class="tlg"/><line x1="240" y1="40" x2="240" y2="80" class="tlg"/><line x1="350" y1="40" x2="350" y2="80" class="tlg"/><line x1="460" y1="40" x2="460" y2="80" class="tlg"/><line x1="570" y1="40" x2="570" y2="80" class="tlg"/><line x1="680" y1="40" x2="680" y2="80" class="tlg"/><line x1="790" y1="40" x2="790" y2="80" class="tlg"/><text x="130" y="98" class="tlt" text-anchor="middle">2013</text><text x="240" y="98" class="tlt" text-anchor="middle">2014</text><text x="350" y="98" class="tlt" text-anchor="middle">2015</text><text x="460" y="98" class="tlt" text-anchor="middle">2016</text><text x="570" y="98" class="tlt" text-anchor="middle">2017</text><text x="680" y="98" class="tlt" text-anchor="middle">2018</text><text x="790" y="98" class="tlt" text-anchor="middle">2019</text><rect x="84" y="50" width="183" height="20" fill="#2b7de0" rx="2"/><rect x="267" y="50" width="590" height="20" fill="#2b7de0" opacity=".32" rx="2"/><rect x="477" y="46" width="155" height="28" fill="#c4475f" opacity=".6" rx="2"/><text x="84" y="34" class="tlt">signed Aug 2012</text><text x="267" y="34" class="tlt" text-anchor="middle">original end Feb 2014</text><text x="555" y="34" class="tlt" text-anchor="middle">stopped 17 months</text><text x="857" y="34" class="tlt" text-anchor="end">current end Jul 2019</text></svg>
+</section>
+<section class="doc">
+<h2>Commitment notes that pay the contract, state books</h2>
+<p class="src">SIAFEM, management unit 162101 (DER), action 1418 (duplication and recovery of state roads), element 449051 (works). Process A26109712<span class="b" data-step="3">3</span>. R$ million; one year per line; stages in four columns<span class="b" data-step="5">5</span>.</p>
+<div class="tw"><table>
+<thead><tr><th>Year</th><th>Note</th><th>Budget source<span class="b" data-step="4">4</span></th><th>Channel read</th><th class="n">Committed</th><th class="n">Settled</th><th class="n">Paid in the year</th><th class="n">Carry-over paid</th></tr></thead>
+<tbody>
+<tr><td>2012</td><td class="mono">2012NE01992</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">10.26</td><td class="n">10.26</td><td class="n">10.26</td><td class="n"></td></tr>
+<tr><td>2012</td><td class="mono">2012NE03725</td><td>041 Treasury, financial surplus</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">12.34</td><td class="n">12.34</td><td class="n">0.00</td><td class="n"></td></tr>
+<tr class="rp"><td>2013</td><td class="mono">2012NE03725</td><td>041 Treasury, financial surplus</td><td><span class="chip c1a">1a</span> counterpart mark</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">9.60</td></tr>
+<tr><td>2013</td><td class="mono">2013NE03787</td><td>007 Credit operations and contributions from abroad</td><td><span class="chip c3">3 domestic credit</span> BB DV0001075/79</td><td class="n">5.16</td><td class="n">5.16</td><td class="n">5.16</td><td class="n"></td></tr>
+<tr><td>2013</td><td class="mono">2013NE04896</td><td>007 Credit operations and contributions from abroad</td><td><span class="chip c3">3 domestic credit</span> BB DV0001075/79</td><td class="n">5.68</td><td class="n">5.68</td><td class="n">5.68</td><td class="n"></td></tr>
+<tr><td>2013</td><td class="mono">2013NE05052</td><td>007 Credit operations and contributions from abroad</td><td><span class="chip c3">3 domestic credit</span> BB DV0001075/79</td><td class="n">5.59</td><td class="n">5.59</td><td class="n">5.59</td><td class="n"></td></tr>
+<tr class="rp"><td>2014</td><td class="mono">2012NE03725</td><td>041 Treasury, financial surplus</td><td><span class="chip c1a">1a</span> counterpart mark</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">2.74</td></tr>
+<tr><td>2014</td><td class="mono">2014NE01253</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a</span> counterpart mark</td><td class="n">1.56</td><td class="n">1.56</td><td class="n">1.56</td><td class="n"></td></tr>
+<tr><td>2014</td><td class="mono">2014NE01870</td><td>007 Credit operations and contributions from abroad</td><td><span class="chip c3">3 domestic credit</span> BB DV0001075/79</td><td class="n">8.48</td><td class="n">8.48</td><td class="n">8.48</td><td class="n"></td></tr>
+<tr><td>2014</td><td class="mono">2014NE07441</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a</span> counterpart mark</td><td class="n">1.41</td><td class="n">1.41</td><td class="n">0.02</td><td class="n"></td></tr>
+<tr class="rp"><td>2015</td><td class="mono">2014NE07441</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">1.39</td></tr>
+<tr><td>2015</td><td class="mono">2015NE00579</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">8.33</td><td class="n">8.33</td><td class="n">8.33</td><td class="n"></td></tr>
+<tr><td>2015</td><td class="mono">2015NE03128</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">1.70</td><td class="n">1.70</td><td class="n">1.70</td><td class="n"></td></tr>
+<tr><td>2016</td><td class="mono">2016NE00734</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.09</td><td class="n">0.09</td><td class="n">0.09</td><td class="n"></td></tr>
+<tr><td>2016</td><td class="mono">2016NE02174</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.08</td><td class="n">0.08</td><td class="n">0.08</td><td class="n"></td></tr>
+<tr><td>2017</td><td class="mono">2017NE03837</td><td>004 Own revenue of the indirect administration</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.34</td><td class="n">0.34</td><td class="n">0.00</td><td class="n"></td></tr>
+<tr class="rp"><td>2018</td><td class="mono">2017NE03837</td><td>004 Own revenue of the indirect administration</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">0.33</td></tr>
+<tr><td>2018</td><td class="mono">2018NE01122</td><td>006 Other sources (DREM)</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.03</td><td class="n">0.03</td><td class="n">0.03</td><td class="n"></td></tr>
+<tr><td>2018</td><td class="mono">2018NE02068</td><td>001 Treasury, initial budget</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.51</td><td class="n">0.51</td><td class="n">0.00</td><td class="n"></td></tr>
+<tr><td>2019</td><td class="mono">2019NE01944</td><td>042 State earmarked, financial surplus</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.54</td><td class="n">0.54</td><td class="n">0.54</td><td class="n"></td></tr>
+<tr><td>2019</td><td class="mono">2019NE05089</td><td>042 State earmarked, financial surplus</td><td><span class="chip c1a">1a state Treasury</span></td><td class="n">0.19</td><td class="n">0.19</td><td class="n">0.19</td><td class="n"></td></tr>
+<tr><th colspan="4">Totals 2012-2019 (each column on its own)</th><th class="n">62.30</th><th class="n">62.30</th><th class="n">47.71</th><th class="n">14.07</th></tr>
+</tbody></table></div>
+</section>
+<section class="miss">
+<h2>What no register gives</h2>
+<p>The date of the tender (only the notice number), the reason for the stoppage, the date the extension was signed, the month of each note (São Paulo publishes the year only) and the disbursement of the loan matched to the note. These are the blanks the method keeps as blanks.</p>
+</section>
+</div>
+<div class="steps" id="steps">
+<article class="step" id="step-1"><h3><span class="n">1</span>What the work is</h3><p>The object text is read once, by rule: the highway code (SP-095), the kilometre marks (43.7 to 74.4, 30.7 km) and the class of work from the verbs. "Duplicação" puts it in capacity expansion; "restauração" alone would be maintenance.</p><div class="out"><b>Fields:</b> rodovia SP-095, extensao_km 30.7, class capacity expansion.</div></article>
+<article class="step" id="step-2"><h3><span class="n">2</span>Procurement stage</h3><p>The notice number gives the year of the tender (2012) and the modality (CO, concorrência). No register publishes the date of the notice, so the procurement stage is measured in years, not months, and only where a notice exists (SP, MG, RS).</p><div class="out"><b>Fields:</b> ano_edital 2012, modality concorrência; tender date absent.</div></article>
+<article class="step" id="step-3"><h3><span class="n">3</span>Linking the notes to the contract</h3><p>The notes carry no contract number. The process number on every note (A26109712) is matched to the notice of the record in the DER register; the link is one to one. Method "process × notice", status probable, 99.0% accuracy in the blind validation on 2022-2024, where the DER publishes the note-contract sheet.</p><div class="out"><b>Result:</b> 22 note-years linked; link strength "confirmed or probable".</div></article>
+<article class="step" id="step-4"><h3><span class="n">4</span>Channel by the paying source (rule P-041)</h3><p>Each note takes the channel of its budget source. Sources 001, 041, 004, 006 and 042 are the state's own money: channel 1a. Source 007 is labelled "credit operations and contributions from abroad", but the notes name the operation, DV0001075 and DV0001079, a Banco do Brasil loan: the named operation wins, channel 3 domestic credit, not 4. The Treasury notes of 2013 and 2014, same contract and same year as the loan, are the counterpart: they stay in 1a with a counterpart mark and are never moved to the loan's channel.</p><div class="out"><b>Result:</b> two channels (1a 59.7%, 3 40.3% of the paid value); family "Treasury + credit", a loan with its counterpart; multichannel = yes.</div></article>
+<article class="step" id="step-5"><h3><span class="n">5</span>Stages side by side, never added</h3><p>Committed, settled, paid in the year and carry-over paid are four columns. Note 2012NE03725 is committed for 12.34 in 2012, pays nothing that year, and is paid 9.60 in 2013 and 2.74 in 2014 as carry-over. The reconciliation is the register's total: 47.71 paid in the year plus 14.07 carry-over equals 61.78, the accumulated total of the record.</p><div class="out"><b>Indicator:</b> carry-over 22.8% of what was paid (problem 4 threshold is 25%: not flagged).</div></article>
+<article class="step" id="step-6"><h3><span class="n">6</span>Term and extension</h3><p>Initial term 18 months, current term 83: extended by 65 months, 3.6 times the original term. The extension is read from the two term fields of the register, so it exists only where a register publishes both (SP, BA, SC, part of MG and RS).</p><div class="out"><b>Indicator:</b> extended = yes; 12 months or more = yes; 50% of the term or more = yes (problem 1).</div></article>
+<article class="step" id="step-7"><h3><span class="n">7</span>Interruption</h3><p>Two readings that do not coincide. The register records a stoppage from 26 Feb 2016 to 25 Jul 2017, 17 months, inside the fiscal adjustment years; only SP, SC and RJ record stoppages. The notes show a payment in every year from 2012 to 2019, so the payment-gap rule, a year without any payment, finds no gap, even though 2017 paid R$ 1.8 thousand. The two measures are kept apart and never compared across spheres.</p><div class="out"><b>Indicators:</b> stoppage recorded = yes (17 months); payment gap = no.</div></article>
+<article class="step" id="step-8"><h3><span class="n">8</span>Value</h3><p>Value with amendments equals the initial value: no value amendment. The accumulated total exceeds it by the price adjustment only (3.40 on 58.39). Growth is read as current value above the original by more than 0.1%, so this contract is not flagged.</p><div class="out"><b>Indicator:</b> value growth = no (problem 2); price adjustment 5.8%.</div></article>
+<article class="step" id="step-9"><h3><span class="n">9</span>What enters the base, and the verdict</h3><p>One row in contratos_pareados_14 with the fields above. In the clean-finish funnel the contract passes "ended by 2025", "no interruption" (by the payment rule) and "not rescinded" (São Paulo has no status field, so the step removes nothing there), and fails "not extended". Audit regimes: the state court over the whole contract and the lender's rules over the loan share, two regimes.</p><div class="out"><b>Verdict:</b> finished at 99.99% of its value, 65 months late, after a 17-month stoppage, paid by two channels; a typical large Treasury-and-credit work of the base.</div></article>
+</div>
+</div>
+<p class="foot">Sources: DER register (Contratos.xlsx) and SP state books (SIAFEM via the transparency web service), joined by script 14b; channel rule P-041; indicators of answers 2 and 3 of the descriptive statistics, v15. Every number here is in dados/t06a and t06b of that document and reconciles with the register's total.</p>
+</div>
+<script>
+(function(){
+  var svg=document.getElementById('arrows'),cols=document.getElementById('cols');
+  function draw(){
+    while(svg.lastChild&&svg.lastChild.tagName!=='defs')svg.removeChild(svg.lastChild);
+    if(window.innerWidth<=980)return;
+    var cr=cols.getBoundingClientRect();
+    document.querySelectorAll('.b[data-step]').forEach(function(b){
+      var n=b.getAttribute('data-step'),s=document.getElementById('step-'+n);if(!s)return;
+      var br=b.getBoundingClientRect(),sr=s.getBoundingClientRect();
+      var x1=br.right-cr.left+2,y1=br.top-cr.top+br.height/2,x2=sr.left-cr.left-2,y2=sr.top-cr.top+22;
+      var dx=Math.max(40,(x2-x1)*0.45);
+      var p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('d','M'+x1+','+y1+' C'+(x1+dx)+','+y1+' '+(x2-dx)+','+y2+' '+x2+','+y2);
+      p.setAttribute('marker-end','url(#ah)');p.setAttribute('data-step',n);p.style.color='var(--accent)';
+      svg.appendChild(p);
+    });
+  }
+  function hi(n,on){document.querySelectorAll('[data-step="'+n+'"]').forEach(function(e){e.classList.toggle('on',on)});var s=document.getElementById('step-'+n);if(s)s.classList.toggle('on',on)}
+  document.querySelectorAll('.step').forEach(function(s){var n=s.id.replace('step-','');s.addEventListener('mouseenter',function(){hi(n,true)});s.addEventListener('mouseleave',function(){hi(n,false)});s.addEventListener('click',function(){hi(n,!s.classList.contains('on'))})});
+  document.querySelectorAll('.b[data-step]').forEach(function(b){var n=b.getAttribute('data-step');b.addEventListener('mouseenter',function(){hi(n,true)});b.addEventListener('mouseleave',function(){hi(n,false)})});
+  window.addEventListener('resize',draw);window.addEventListener('load',draw);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+  draw();
+})();
+</script>

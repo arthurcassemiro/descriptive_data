@@ -1,0 +1,175 @@
+<title>DNIT Contract 00879/2014 Read by the Method</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=Source+Code+Pro:wght@400;500&display=swap">
+<style>
+/* layout: the federal documents on the left as the registers give them, the method on the right, arrows from field to rule */
+:root{--bg:#f7f8f6;--paper:#ffffff;--ink:#1b2430;--ink2:#4a5564;--mut:#7c8794;--line:#d8dde3;--soft:#eef1f4;--accent:#2c4f8f;--ch1a:#2c4f8f;--ch1b:#8f3fb3;--ch3:#13a0a0;--ch5:#c29a1f;--stop:#c4475f;--display:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3","Helvetica Neue",Arial,sans-serif;--mono:"Source Code Pro",Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14181d;--paper:#1c2128;--ink:#e8ecf0;--ink2:#b8c0ca;--mut:#8a94a0;--line:#343c46;--soft:#232a33;--accent:#8fb0ea;--ch1a:#6f93d6;--ch1b:#b887d6;--ch3:#3cc0c0;--ch5:#d6b24a;--stop:#e0718a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14181d;--paper:#1c2128;--ink:#e8ecf0;--ink2:#b8c0ca;--mut:#8a94a0;--line:#343c46;--soft:#232a33;--accent:#8fb0ea;--ch1a:#6f93d6;--ch1b:#b887d6;--ch3:#3cc0c0;--ch5:#d6b24a;--stop:#e0718a;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans);margin:0;padding-block:28px 60px;padding-inline:16px}
+.wrap{max-width:1360px;margin:0 auto;position:relative}
+h1{font:600 30px/1.2 var(--display);margin:0 0 6px;text-wrap:balance}
+.kick{font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.intro{color:var(--ink2);max-width:78ch;margin:0 0 26px}
+.cols{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;position:relative}
+@media (max-width:980px){.cols{grid-template-columns:1fr;gap:28px}}
+.doc{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin:0 0 22px;min-width:0}
+.doc h2{font:600 17px/1.3 var(--display);margin:0 0 2px}
+.doc .src{font-size:12.5px;color:var(--mut);margin:0 0 14px}
+.fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px 18px}
+.f{min-width:0}.f .l{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}.f .v{font-variant-numeric:tabular-nums}
+.f.wide{grid-column:1/-1}.f .v.obj{font:14px/1.45 var(--sans);color:var(--ink2)}
+.tw{overflow-x:auto;margin-top:6px}table{border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums;min-width:100%}
+th{font-weight:600;text-align:left;color:var(--ink2);border-bottom:1px solid var(--line);padding:5px 7px;white-space:nowrap}
+td{padding:4px 7px;border-bottom:1px solid var(--soft);white-space:nowrap}td.n,th.n{text-align:right}
+tr.rp td{color:var(--ink2);background:var(--soft)}
+.chip{display:inline-block;padding:1px 7px;border-radius:3px;font-size:11.5px;color:#fff;font-weight:600}
+.c1a{background:var(--ch1a)}.c1b{background:var(--ch1b)}.c3{background:var(--ch3)}.c5{background:var(--ch5)}
+.mono{font-family:var(--mono);font-size:12px}
+.b{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font:600 12px/1 var(--sans);vertical-align:2px;margin-left:5px;cursor:default}
+.b.on{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 35%,transparent)}
+.steps{display:flex;flex-direction:column;gap:12px;min-width:0}
+.step{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:12px 14px 12px 16px}
+.step.on{background:var(--soft)}
+.step h3{font:600 15px/1.3 var(--display);margin:0 0 4px;display:flex;gap:8px;align-items:center}
+.step h3 .n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font:600 12px/1 var(--sans);flex:none}
+.step p{margin:0;font-size:13.5px;color:var(--ink2)}
+.step .out{margin-top:6px;font-size:12.5px;color:var(--ink)}.step .out b{font-weight:600}
+.tl{width:100%;height:auto;display:block;margin-top:8px}.tlt{font:11px var(--sans);fill:var(--ink2)}.tlg{stroke:var(--line)}
+.yr{display:grid;grid-template-columns:repeat(13,1fr);gap:3px;margin-top:6px}.yr div{text-align:center;font-size:11px;color:var(--ink2)}.yr .bar{display:flex;flex-direction:column;gap:2px;margin-top:3px}.yr .bar i{display:block;height:8px;border-radius:2px}
+svg.arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+svg.arrows path{fill:none;stroke:var(--accent);stroke-width:1.4;opacity:.55}svg.arrows path.on{opacity:1;stroke-width:2.2}
+@media (max-width:980px){svg.arrows{display:none}}
+.miss{background:var(--paper);border:1px dashed var(--line);border-radius:4px;padding:12px 16px;margin-top:8px}
+.miss h2{font:600 15px/1.3 var(--display);margin:0 0 4px}.miss p{margin:0;color:var(--ink2);font-size:13.5px}
+.foot{margin-top:26px;font-size:12.5px;color:var(--mut)}
+@media (prefers-reduced-motion:no-preference){svg.arrows path{transition:opacity .2s,stroke-width .2s}}
+</style>
+<div class="wrap">
+<p class="kick">Prototype, one federal contract through the method</p>
+<h1>DNIT Contract 00879/2014 Read by the Method</h1>
+<p class="intro">A large capacity-expansion work of the Union: the duplication of 40 km of the BR-116 in Bahia, from the Pernambuco border side to Feira de Santana, contracted under the integrated regime (design and build). On the left, the four documents as the registers give them: the Comprasnet contract record, the DNIT contract sheet, the SIAFI commitment notes and the year panel of the highway. On the right, the nine readings the method makes. Hover a rule to see its fields.</p>
+<div class="cols" id="cols">
+<svg class="arrows" id="arrows" aria-hidden="true"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs></svg>
+<div class="left">
+<section class="doc">
+<h2>Contract record, Comprasnet and ObrasGov</h2>
+<p class="src">contratos.comprasnet.gov.br, record 81348; ObrasGov investment projects 1498.29-00 and 2977.29-02. Values in R$ million.</p>
+<div class="fields">
+<div class="f"><div class="l">Contract</div><div class="v">00879/2014</div></div>
+<div class="f"><div class="l">Contracting body</div><div class="v">DNIT (UG 393003)</div></div>
+<div class="f"><div class="l">Contractor</div><div class="v">Amorim Barreto Engenharia Ltda</div></div>
+<div class="f"><div class="l">Procurement</div><div class="v">RDC 292/2014-05, item 06<span class="b" data-step="2">2</span></div></div>
+<div class="f"><div class="l">Process</div><div class="v">50605.000863/2014-50<span class="b" data-step="3">3</span></div></div>
+<div class="f wide"><div class="l">Object<span class="b" data-step="1">1</span></div><div class="v obj">Elaboração dos projetos básico e executivo de engenharia e execução das obras de duplicação, implantação de vias laterais, adequação de capacidade, restauração com melhoramento e obras de arte especiais na rodovia BR-116/BA. Trecho: Div. PE/BA (Ibó), Div. BA/MG; subtrecho: Entr. BA-504 (p/ Santanópolis), acesso ao Contorno de Feira de Santana; segmento: km 387,41 a km 427,75; extensão: 40,34 km.</div></div>
+<div class="f"><div class="l">Signed</div><div class="v">2014-10-09</div></div>
+<div class="f"><div class="l">Published</div><div class="v">2014-10-13</div></div>
+<div class="f"><div class="l">Validity</div><div class="v">2014-10-14 to 2025-04-25<span class="b" data-step="6">6</span></div></div>
+<div class="f"><div class="l">Initial value</div><div class="v">297.00<span class="b" data-step="8">8</span></div></div>
+<div class="f"><div class="l">Current value (global)</div><div class="v">265.31<span class="b" data-step="8">8</span></div></div>
+<div class="f"><div class="l">Amendments</div><div class="v">22</div></div>
+<div class="f wide"><div class="l">ObrasGov works under the contract<span class="b" data-step="1">1</span></div><div class="v">2977.29-02 Adequação Div. PE/BA (Ibó) – Feira de Santana (internal plan MT01086) and 1498.29-00 Contorno de Feira de Santana (MT11600). Status: completed; unfinished. Physical progress 43% (updated 2026-08).<span class="b" data-step="9">9</span></div></div>
+</div>
+</section>
+<section class="doc">
+<h2>Contract sheet, DNIT register and Painel de Contratos</h2>
+<p class="src">DNIT contract register (key 05 00879/2014) and the Painel de Contratos sheet; SUPRA snapshot of Dec 2023. R$ million.</p>
+<div class="fields">
+<div class="f"><div class="l">Intervention</div><div class="v">Duplicação / restauração, km 387.41 to 427.75, 40.34 km</div></div>
+<div class="f"><div class="l">Start order</div><div class="v">2014-11-05</div></div>
+<div class="f"><div class="l">Planned end</div><div class="v">2018-10-13<span class="b" data-step="6">6</span></div></div>
+<div class="f"><div class="l">Works end / term end</div><div class="v">2025-02-24 / 2025-04-25</div></div>
+<div class="f"><div class="l">Days stalled</div><div class="v">210<span class="b" data-step="7">7</span></div></div>
+<div class="f"><div class="l">Days added by amendments</div><div class="v">2,116<span class="b" data-step="6">6</span></div></div>
+<div class="f"><div class="l">Value at initial prices</div><div class="v">297.00</div></div>
+<div class="f"><div class="l">Price readjustment</div><div class="v">201.86<span class="b" data-step="8">8</span></div></div>
+<div class="f"><div class="l">Total value</div><div class="v">467.17</div></div>
+<div class="f"><div class="l">Measured</div><div class="v">263.08 (56.3%)<span class="b" data-step="8">8</span></div></div>
+<div class="f"><div class="l">Committed</div><div class="v">467.17 (100%)</div></div>
+<div class="f"><div class="l">Situation, three registers</div><div class="v">Painel: concluído. DNIT register: aguardando conclusão. ObrasGov: completed; unfinished.<span class="b" data-step="9">9</span></div></div>
+<div class="f"><div class="l">SUPRA, Dec 2023</div><div class="v">in force 529.66; measured 418.46 (79%)</div></div>
+</div>
+<svg class="tl" viewBox="0 0 900 120" role="img" aria-label="timeline"><line x1="130" y1="40" x2="130" y2="80" class="tlg"/><line x1="200" y1="40" x2="200" y2="80" class="tlg"/><line x1="270" y1="40" x2="270" y2="80" class="tlg"/><line x1="340" y1="40" x2="340" y2="80" class="tlg"/><line x1="410" y1="40" x2="410" y2="80" class="tlg"/><line x1="480" y1="40" x2="480" y2="80" class="tlg"/><line x1="550" y1="40" x2="550" y2="80" class="tlg"/><line x1="620" y1="40" x2="620" y2="80" class="tlg"/><line x1="690" y1="40" x2="690" y2="80" class="tlg"/><line x1="760" y1="40" x2="760" y2="80" class="tlg"/><line x1="830" y1="40" x2="830" y2="80" class="tlg"/><text x="130" y="98" class="tlt" text-anchor="middle">2015</text><text x="200" y="98" class="tlt" text-anchor="middle">2016</text><text x="270" y="98" class="tlt" text-anchor="middle">2017</text><text x="340" y="98" class="tlt" text-anchor="middle">2018</text><text x="410" y="98" class="tlt" text-anchor="middle">2019</text><text x="480" y="98" class="tlt" text-anchor="middle">2020</text><text x="550" y="98" class="tlt" text-anchor="middle">2021</text><text x="620" y="98" class="tlt" text-anchor="middle">2022</text><text x="690" y="98" class="tlt" text-anchor="middle">2023</text><text x="760" y="98" class="tlt" text-anchor="middle">2024</text><text x="830" y="98" class="tlt" text-anchor="middle">2025</text><rect x="114" y="50" width="281" height="20" fill="#2c4f8f" rx="2"/><rect x="395" y="50" width="457" height="20" fill="#2c4f8f" opacity=".32" rx="2"/><rect x="550" y="44" width="223" height="32" fill="none" stroke="#2c4f8f" stroke-dasharray="4 3" rx="2"/><text x="114" y="34" class="tlt">signed Oct 2014</text><text x="395" y="34" class="tlt" text-anchor="middle">planned end Oct 2018</text><text x="661" y="34" class="tlt" text-anchor="middle">notes with the contract number, 2021-2024</text><text x="852" y="34" class="tlt" text-anchor="end">term end Apr 2025</text></svg>
+</section>
+<section class="doc">
+<h2>Commitment notes that name the contract, SIAFI</h2>
+<p class="src">Transparency Portal and ObrasGov, UG 393003, 18 notes of 2021-2024, element 449051. Note text: "05.1.0.00.0879.2014, RDC 292/2014-05, item 06"<span class="b" data-step="3">3</span>. R$ million; stages in three columns<span class="b" data-step="5">5</span>.</p>
+<div class="tw"><table>
+<thead><tr><th>Year</th><th>Note</th><th>Action</th><th>Budget source<span class="b" data-step="4">4</span></th><th>Amendment author</th><th class="n">Committed</th><th class="n">Paid in the year</th><th class="n">Carry-over paid</th></tr></thead>
+<tbody>
+<tr><td>2021</td><td class="mono">2021NE000304</td><td>13X7 Adequação Ibó–Feira</td><td>free Treasury resources</td><td></td><td class="n">62.13</td><td class="n">58.12</td><td class="n">4.01</td></tr>
+<tr><td>2022</td><td class="mono">2022NE000485</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">73.72</td><td class="n">73.72</td><td class="n"></td></tr>
+<tr><td>2022</td><td class="mono">2022NE001156</td><td>7XJ7 Contorno de Feira</td><td>free Treasury resources</td><td></td><td class="n">1.89</td><td class="n">1.89</td><td class="n"></td></tr>
+<tr><td>2022</td><td class="mono">2022NE001157</td><td>7XJ7 Contorno de Feira</td><td>free Treasury resources</td><td>Bancada da Bahia (7106)</td><td class="n">0.96</td><td class="n">0.96</td><td class="n"></td></tr>
+<tr><td>2022</td><td class="mono">2022NE002366</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">10.00</td><td class="n">6.67</td><td class="n">3.33</td></tr>
+<tr class="rp"><td>2022</td><td class="mono">2022NE002399</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">16.98</td><td class="n">0.00</td><td class="n">16.98</td></tr>
+<tr class="rp"><td>2022</td><td class="mono">2022NE002861</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">3.94</td><td class="n">0.00</td><td class="n">3.94</td></tr>
+<tr class="rp"><td>2022</td><td class="mono">2022NE003324</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">0.48</td><td class="n">0.00</td><td class="n">0.48</td></tr>
+<tr class="rp"><td>2022</td><td class="mono">2022NE003325</td><td>13X7</td><td>other earmarked revenue</td><td></td><td class="n">1.55</td><td class="n">0.00</td><td class="n">1.55</td></tr>
+<tr class="rp"><td>2022</td><td class="mono">2022NE003492</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">35.00</td><td class="n">0.00</td><td class="n">35.00</td></tr>
+<tr><td>2023</td><td class="mono">2023NE000871</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">17.63</td><td class="n">17.63</td><td class="n"></td></tr>
+<tr><td>2023</td><td class="mono">2023NE001496</td><td>13X7</td><td>Treasury bonds</td><td></td><td class="n">42.10</td><td class="n">24.32</td><td class="n">17.78</td></tr>
+<tr><td>2023</td><td class="mono">2023NE003273</td><td>7XJ7 Contorno de Feira</td><td>free Treasury resources</td><td>Bancada da Bahia (7106)</td><td class="n">1.70</td><td class="n">0.00</td><td class="n">0.00</td></tr>
+<tr><td>2023</td><td class="mono">2023NE003279</td><td>7XJ7 Contorno de Feira</td><td>free Treasury resources</td><td></td><td class="n">10.00</td><td class="n">0.00</td><td class="n">0.00</td></tr>
+<tr class="rp"><td>2023</td><td class="mono">2023NE003453</td><td>13X7</td><td>Treasury bonds</td><td></td><td class="n">4.61</td><td class="n">0.00</td><td class="n">4.61</td></tr>
+<tr class="rp"><td>2023</td><td class="mono">2023NE003877</td><td>13X7</td><td>Treasury bonds</td><td></td><td class="n">10.00</td><td class="n">0.00</td><td class="n">10.00</td></tr>
+<tr><td>2024</td><td class="mono">2024NE001846</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">4.62</td><td class="n">0.68</td><td class="n"></td></tr>
+<tr><td>2022</td><td class="mono">2022NE001088</td><td>13X7</td><td>free Treasury resources</td><td></td><td class="n">0.00</td><td class="n">0.00</td><td class="n">0.00</td></tr>
+<tr><th colspan="5">Totals 2021-2024 (each column on its own)</th><th class="n">297.31</th><th class="n">183.99</th><th class="n">97.69</th></tr>
+</tbody></table></div>
+</section>
+<section class="doc">
+<h2>The highway the contract sits on, year by year</h2>
+<p class="src">Panel of the federal highway BR-116 in Bahia (painel_rodovia_ano): which channels paid on the asset each year<span class="b" data-step="4">4</span>, and the Union's payments by marker. R$ million at 2025 prices.</p>
+<div class="tw"><table>
+<thead><tr><th>Years</th><th>Channels on the asset</th><th class="n">Union paid, 1a</th><th class="n">Union transfers, 1b</th><th>Union payments by marker</th><th>Other actors on the same road</th></tr></thead>
+<tbody>
+<tr><td>2001-2008</td><td><span class="chip c1a">1a DNIT</span> <span class="chip c1b">1b transfer</span></td><td class="n">461.8</td><td class="n">181.1</td><td>not informed before 2010</td><td></td></tr>
+<tr><td>2009-2019</td><td><span class="chip c1a">1a DNIT</span> <span class="chip c5">5 ViaBahia concession (2009)</span></td><td class="n">490.8</td><td class="n"></td><td>PAC 2010-2019</td><td>concession south of Feira de Santana</td></tr>
+<tr><td>2020-2025</td><td><span class="chip c1a">1a DNIT</span> <span class="chip c5">5 ViaBahia</span></td><td class="n">910.1</td><td class="n"></td><td>discretionary 2020-2024, state-caucus amendments 2021-2025, Novo PAC 2024-2025</td><td>Bahia pays 18 contracts on access roads to the BR-116 (R$ 141 mn, Treasury and domestic credit, 2020-2024)<span class="b" data-step="4">4</span></td></tr>
+</tbody></table></div>
+</section>
+<section class="miss">
+<h2>What no register gives</h2>
+<p>The date of the tender, the reason for the 210 days stalled, the dates of the 22 amendments, and every payment before 2021: the works started in November 2014, but no note before 2021 carries the contract number, so the first six years of payment cannot be linked to this contract. Three registers give three situations for the same work.</p>
+</section>
+</div>
+<div class="steps" id="steps">
+<article class="step" id="step-1"><h3><span class="n">1</span>What the work is</h3><p>The object text gives the highway (BR-116/BA), the kilometre marks (387.41 to 427.75, 40.34 km) and the service: duplication with side roads and bridges, under the integrated regime (the contractor designs and builds). ObrasGov splits the contract into two works, the Ibó–Feira upgrade and the Feira de Santana ring road, which the method keeps under one contract.</p><div class="out"><b>Fields:</b> highway BR-116, 40.34 km, class capacity expansion, design and build = yes, two works.</div></article>
+<article class="step" id="step-2"><h3><span class="n">2</span>Procurement stage</h3><p>The modality is known (RDC, the differentiated regime of Law 12.462/2011, procedure 292/2014-05) because the contract record names it; three quarters of the federal contracts have it. No federal register publishes the date of the tender notice, so the procurement stage has no duration on the Union side.</p><div class="out"><b>Fields:</b> modality RDC; tender date absent.</div></article>
+<article class="step" id="step-3"><h3><span class="n">3</span>Linking the notes to the contract</h3><p>The link comes from ObrasGov, which lists the notes of each work, and is confirmed by the text of every note ("05.1.0.00.0879.2014, RDC 292/2014-05") and by the two internal plans. It exists from 2021 only: the Union's notes carry a contract reference from 2014 for a few contracts and from 2020-2021 for most, which is why the federal contract layer of the base starts in 2020 and why this contract's payments of 2014-2020 stay unlinked.</p><div class="out"><b>Result:</b> 18 notes, 2021-2024, link confirmed; 2014-2020 not linkable.</div></article>
+<article class="step" id="step-4"><h3><span class="n">4</span>Channel by the paying source</h3><p>Every note is Union budget paid by the DNIT: channel 1a, direct execution. Within it the sources are free Treasury resources (79%), Treasury bonds (20%, the 2023 notes) and a sliver of earmarked revenue; two notes carry a state-caucus amendment of the Bahia bench. At the contract level this is a single channel. The mix is on the asset: the BR-116 in Bahia carried Union transfers until 2008, the ViaBahia concession from 2009, DNIT direct execution throughout, and the state's own contracts on the access roads. The ten federal contracts with a loan tranche are old (2002-2005) and small.</p><div class="out"><b>Result:</b> contract single channel (1a); asset two channels every year since 2009 (1a and 5) plus state money on the feeders.</div></article>
+<article class="step" id="step-5"><h3><span class="n">5</span>Stages side by side, never added</h3><p>Committed 297.31, paid in the year 183.99, carry-over paid 97.69. Six notes of December 2022 and 2023 (35.00, 16.98, 10.00, 4.61, 3.94, 1.55) were committed at year end and paid entirely as carry-over the next year; note 2022NE000485 was committed and paid in full in 2022.</p><div class="out"><b>Indicator:</b> carry-over 34.7% of what was paid (problem 4, threshold 25%: flagged).</div></article>
+<article class="step" id="step-6"><h3><span class="n">6</span>Term and extension</h3><p>Signed in October 2014 with the end planned for October 2018 (48 months); the term now runs to April 2025, 78 months later, after 22 amendments that added 2,116 days. The federal extension is read from the planned and current end of the ObrasGov record; the Painel de Contratos gives the days added.</p><div class="out"><b>Indicator:</b> extended = yes; 12 months or more = yes; above 50% of the term = yes (problem 1).</div></article>
+<article class="step" id="step-7"><h3><span class="n">7</span>Interruption</h3><p>The Painel de Contratos records 210 days stalled; ObrasGov marks one of the two works as unfinished with 43% physical progress. On the federal side interruption is a recorded status, not a payment gap: the notes start in 2021, so a year without payment cannot be read for the whole life of the contract. This is why the federal 36.8% and the state 5.4% of problem 5 are never compared.</p><div class="out"><b>Indicators:</b> days stalled = 210; unfinished = yes; payment gap = not measurable.</div></article>
+<article class="step" id="step-8"><h3><span class="n">8</span>Value</h3><p>Three readings of the same contract. The current value (265.31) is below the initial value (297.00): by the rule, no value growth. The Painel adds 201.86 of price readjustment and reaches 467.17, of which 263.08 is measured (56%). The SUPRA snapshot of December 2023 shows 529.66 in force and 418.46 measured (79%). The method keeps the first as the indicator and the other two as columns, never mixed.</p><div class="out"><b>Indicator:</b> value growth = no (problem 2); readjustment 68% of the initial value.</div></article>
+<article class="step" id="step-9"><h3><span class="n">9</span>What enters the base, and the verdict</h3><p>One row of the federal project base. In the clean-finish funnel the contract passes "ended by 2025" (term end April 2025) and then meets the federal register gap at step 2: the Painel says concluded, the DNIT register says awaiting completion, ObrasGov says completed and unfinished. The method keeps it out of "completed" until the ObrasGov status is validated, which is the 71% drop of the federal line in Chart 24. Audit: TCU and CGU over the whole contract; no lender.</p><div class="out"><b>Verdict:</b> a 40 km duplication under the integrated regime, 78 months late, 22 amendments, a third of the payment as carry-over, three statuses and no linkable payment before 2021; the typical large federal work of the base.</div></article>
+</div>
+</div>
+<p class="foot">Sources: Comprasnet contract 81348, ObrasGov projects 1498.29-00 and 2977.29-02, SIAFI notes through the Transparency Portal, DNIT contract register and Painel de Contratos, SUPRA snapshot of Dec 2023, highway panel of the thesis (painel_rodovia_ano) and the Bahia contract base; all in the federal project base (tracing_note/project_base) and in contratos_pareados_14. Notes total 297.31 committed, 183.99 paid and 97.69 carry-over paid, as in contracts.csv.</p>
+</div>
+<script>
+(function(){
+  var svg=document.getElementById('arrows'),cols=document.getElementById('cols');
+  function draw(){
+    while(svg.lastChild&&svg.lastChild.tagName!=='defs')svg.removeChild(svg.lastChild);
+    if(window.innerWidth<=980)return;
+    var cr=cols.getBoundingClientRect();
+    document.querySelectorAll('.b[data-step]').forEach(function(b){
+      var n=b.getAttribute('data-step'),s=document.getElementById('step-'+n);if(!s)return;
+      var br=b.getBoundingClientRect(),sr=s.getBoundingClientRect();
+      var x1=br.right-cr.left+2,y1=br.top-cr.top+br.height/2,x2=sr.left-cr.left-2,y2=sr.top-cr.top+22;
+      var dx=Math.max(40,(x2-x1)*0.45);
+      var p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('d','M'+x1+','+y1+' C'+(x1+dx)+','+y1+' '+(x2-dx)+','+y2+' '+x2+','+y2);
+      p.setAttribute('marker-end','url(#ah)');p.setAttribute('data-step',n);p.style.color='var(--accent)';
+      svg.appendChild(p);
+    });
+  }
+  function hi(n,on){document.querySelectorAll('[data-step="'+n+'"]').forEach(function(e){e.classList.toggle('on',on)});var s=document.getElementById('step-'+n);if(s)s.classList.toggle('on',on)}
+  document.querySelectorAll('.step').forEach(function(s){var n=s.id.replace('step-','');s.addEventListener('mouseenter',function(){hi(n,true)});s.addEventListener('mouseleave',function(){hi(n,false)});s.addEventListener('click',function(){hi(n,!s.classList.contains('on'))})});
+  document.querySelectorAll('.b[data-step]').forEach(function(b){var n=b.getAttribute('data-step');b.addEventListener('mouseenter',function(){hi(n,true)});b.addEventListener('mouseleave',function(){hi(n,false)})});
+  window.addEventListener('resize',draw);window.addEventListener('load',draw);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+  draw();
+})();
+</script>
